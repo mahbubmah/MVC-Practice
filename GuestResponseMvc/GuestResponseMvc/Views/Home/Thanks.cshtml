@@ -1,0 +1,41 @@
+﻿@model GuestResponseMvc.Models.GuestResponse
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width">
+        <link href="~/Content/bootstrap.css" rel="stylesheet" />
+        <link href="~/Content/bootstrap-theme.css" rel="stylesheet" />
+        <title>Thanks</title>
+        <style>
+            body{background-color: #f1f1f1;}
+        </style>
+    </head>
+    <body>
+        <div class="wrapper">
+            <div class="lead">
+                <h1 class="text-center">Thank you, @Model.Name!</h1>
+                <div class="text-center">
+                
+                    @if (Model.WillAttend == true)
+                    {
+                        @:It's greate that your are commming. The drinks are already in the fridge!
+                    }
+                    else
+                    {
+                        @:Sorry to hear that you can't make it, but thanks for letting us know.
+                    }
+                </div>
+            </div>
+        </div>
+
+        <script src="~/Scripts/bootstrap.js"></script>
+        <script src="~/Scripts/jquery-1.10.2.js"></script>
+
+    </body>
+</html>
